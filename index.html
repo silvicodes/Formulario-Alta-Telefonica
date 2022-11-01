@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Formulario Información Alta Telefónica</title>
+    <link rel="stylesheet" href="style.css">
+    <script language="JavaScript" src="Main.js"></script>
+
+</head>
+
+<body>
+    <h1>Formulario Información Alta Telefónica</h1>
+
+    <form action="./procesarFormulario.php" name="telefonica">
+
+        <fieldset>
+
+            <legend>Datos Personales</legend>
+            Nombre: <input class="yellow" type="text" name="nombre" maxlength="30" />
+            <br> Apellidos: <input class="yellow" type="text" name="apellidos" maxlength="60" />
+            <br> Dirección: <input class="yellow" type="text" name="direccion" maxlength="60" />
+            <br> Codigo Postal: <input onblur=postal() id="post" class="yellow" type="text" />
+            <label id="lab"></label>
+            <br> Localidad: <input id="loc" class="yellow" type="text" />
+            <br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+
+            <legend>Tipo de Contratación</legend>
+
+            <input type="radio" name="tipoc" value="nuevo" checked="checked">Nueva Contratación &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="tipoc" value="porta">Portabilidad &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="tipoc" value="cambio">Cambio de Contrato &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <br>
+            <br> Elija la compañía actual:
+            <select>
+                <option value="movistar">Movistar</option>
+                <option value="orange">Orange</option>
+                <option value="vodafone">Vodafone</option>
+                <option value="yoigo">Yoigo</option>
+                <option value="ninguna">No tengo ninguna compañía</option>
+                </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; En caso de portabilidad, elija la nueva compañía:
+            <select>
+                <option value="movistar">Movistar</option>
+                <option value="orange">Orange</option>
+                <option value="vodafone">Vodafone</option>
+                <option value="yoigo">Yoigo</option>
+                </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+
+            <legend>Datos Bancarios</legend>
+
+            País: <input class="yellow" type="text" value="ES" readonly="readonly" /> (sólo válido ES)
+            <br> Control IBAN: <input id="iban" class="yellow" type="text" placeholder="XX" pattern="[0-9]{2}" /> (dos dígitos)
+            <br> Entidad: <input id="ent" class="yellow" type="text" placeholder="XXXX" pattern="[0-9]{4}" /> (cuatro dígitos)
+            <br> Sucursal: <input id="suc" class="yellow" type="text" placeholder="XXXX" pattern="[0-9]{4}" /> (cuatro dígitos)
+            <br> DC: <input id="dc" class="yellow" type="text" placeholder="XX" mpattern="[0-9]{2}" /> (dos dígitos)
+            <br> Cuenta: <input id="acc" class="yellow" type="text" placeholder="XXXXXXXXXX" pattern="[0-9]{10}" /> (diez dígitos)
+            <br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+
+            <legend>Datos Estadísticos - ¿Cómo nos conoció?</legend>
+
+            <input type="checkbox" id="cbox1" value="tv"> A través de la TV
+            <br>
+            <input type="checkbox" id="cbox2" value="radio"> A través de la radio
+            <br>
+            <input type="checkbox" id="cbox3" value="internet"> A través de la internet
+            <br>
+            <input type="checkbox" id="cbox4" value="otros"> Otros
+            <br>
+            <input id="number" type="range" min="1" max="5"> Valoración [1-5]
+
+            <br> Fecha de la Encuesta:
+            <input id="date" type="date" value="2019-01-01"> Valoración [1-5]
+
+        </fieldset>
+
+
+        <button class="gray" type="submit">Enviar Datos</button>
+        <button class="gray" type="reset">Borrar Datos</button>
+        <br>
+        <button class="button2" onclick="numericValue()">Mostrar<br/>Valoración</button>
+        <button class="button2" onclick="account()">Mostrar<br/>Cuenta</button>
+        <button class="button2" onclick="day()">Mostrar Día<br/>Semana</button>
+
+
+
+
+    </form>
+
+</body>
+
+</html>
