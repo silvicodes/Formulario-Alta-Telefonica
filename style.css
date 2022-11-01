@@ -1,0 +1,67 @@
+h1{
+    text-align: center;
+    color: blue;
+    text-shadow: yellow 0.15em 0.1em 0.2em;
+}
+
+legend{
+    color: white;
+    background-color: red;
+}
+
+fieldset{
+    background-color: aqua;
+    border-radius: 5px;
+    border: 0;
+
+}
+
+.yellow{
+    background-color: yellow;
+    border-radius: 5px;
+}
+
+.gray{
+    background-color: lightgray;
+}
+
+.button2{
+    background-color: pink;
+    height: 40px;
+    width: 90px;
+    border-radius: 5px;
+
+    
+}h1{
+    text-align: center;
+    color: blue;
+    text-shadow: yellow 0.15em 0.1em 0.2em;
+}
+
+legend{
+    color: white;
+    background-color: red;
+}
+
+fieldset{
+    background-color: aqua;
+    border-radius: 5px;
+    border: 0;
+
+}
+
+.yellow{
+    background-color: yellow;
+    border-radius: 5px;
+}
+
+.gray{
+    background-color: lightgray;
+}
+
+.button2{
+    background-color: pink;
+    height: 40px;
+    width: 90px;
+    border-radius: 5px;   
+}
